@@ -1,0 +1,10 @@
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/wechatApp?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+server:
+  port: 8081
+  context-path: /wechatApp

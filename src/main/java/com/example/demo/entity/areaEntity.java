@@ -1,19 +1,31 @@
 package com.example.demo.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Date;
 
 /**
  * Created by liumolong on 18/5/24.
  */
-public class areaEntity {
-    private String areaName;
-
+@Entity
+@Table(name = "tb_area")
+public class AreaEntity {
+    @Id
+    @Column(name = "area_id")
     private Integer areaId;
 
+    @Column(name = "area_name")
+    private String areaName;
+
+    @Column(name = "priority")
     private Integer priority;
 
+    @Column(name = "create_time")
     private Date createTime;
 
+    @Column(name = "last_edit_time")
     private Date lastEditTime;
 
     public String getAreaName() {
