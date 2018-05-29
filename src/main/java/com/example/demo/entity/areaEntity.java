@@ -1,9 +1,6 @@
 package com.example.demo.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 /**
@@ -14,6 +11,7 @@ import java.util.Date;
 public class AreaEntity {
     @Id
     @Column(name = "area_id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer areaId;
 
     @Column(name = "area_name")
